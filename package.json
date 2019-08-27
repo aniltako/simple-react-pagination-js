@@ -11,7 +11,7 @@
     "start-dev": "webpack-dev-server --config webpack.dev.config.js",
     "start": "npm-run-all -p watch-bootstrap watch-custom start-dev",
     "build": "webpack --config webpack.prod.config.js",
-    "test": "jest",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "commit": "git-cz",
     "release": "semantic-release"
   },
