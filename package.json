@@ -12,7 +12,8 @@
     "start": "npm-run-all -p watch-bootstrap watch-custom start-dev",
     "build": "webpack --config webpack.prod.config.js",
     "test": "jest",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "release": "semantic-release"
   },
   "files": [
     "build"
