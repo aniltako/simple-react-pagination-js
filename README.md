@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/aniltako/simple-react-pagination-js.svg?branch=master)](https://travis-ci.org/aniltako/simple-react-pagination-js)
+
 # simple-react-pagination-js
 
 Simple with zero dependency Pagination library.
