@@ -1,0 +1,18 @@
+// Fonts
+@import 'fonts/fontface.scss';
+
+// Abstracts (variables, mixins)
+@import 'abstracts/variables.scss';
+// @import 'abstracts/mixins.scss';
+
+// Vendor (for third party component)
+// @import 'vendors/some-third-party-component';
+
+// Base (normalize)
+// @import 'pages/global.scss';
+
+// @import 'base/normalize.scss';
+
+@import 'components/pagination.scss';
+
+// @import 'layout/dashboard.scss';

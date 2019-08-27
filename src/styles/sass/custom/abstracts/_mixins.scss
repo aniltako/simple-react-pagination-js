@@ -1,0 +1,113 @@
+ /*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 Rotate 
+2.0 Border Radius
+3.0 Transition Style
+4.0 Box Shadow
+5.0 Typography Fonts
+6.0 Grid Maker
+6.0 Translate
+8.0 Placeholder Color
+9.0 Triangle
+--------------------------------------------------------------*/
+// 1.0 Rotate
+@mixin rotate ($deg) {
+  transform         : rotate($deg);
+  -webkit-transform : rotate($deg);
+  -moz-transform    : rotate($deg);
+  -ms-transform     : rotate($deg);
+}
+
+// 2.0 Border Radius
+@mixin border-radius($radius){
+  border-radius         : $radius;
+  -moz-border-radius    : $radius;
+  -webkit-border-radius : $radius;
+  -o-border-radius      : $radius;
+}
+
+// 3.0 Transition Style
+@mixin transition ($transition-property, $transition-duration, $timing-function ){
+ -webkit-transition : $transition-property $transition-duration $timing-function;
+ -moz-transition    : $transition-property $transition-duration $timing-function;
+ -o-transition      : $transition-property $transition-duration $timing-function;
+ transition         : $transition-property $transition-duration $timing-function;
+}
+
+// 4.0 Box Shadow
+@mixin box-shadow($top, $left, $blur, $size, $color, $inset: false) {
+	@if $inset {
+		-webkit-box-shadow : inset $top $left $blur $size $color;
+		-moz-box-shadow    : inset $top $left $blur $size $color;
+		box-shadow         : inset $top $left $blur $size $color;
+	} @else {
+	  -webkit-box-shadow : $top $left $blur $size $color;
+	  -moz-box-shadow    : $top $left $blur $size $color;
+	  box-shadow         : $top $left $blur $size $color;
+	}
+}
+
+// 5.0 Typography Fonts
+@mixin typo($base-font-family, $font-size, $font-weight, $line-height){
+  font-family : $base-font-family;
+  font-size   : $font-size;
+  font-weight : $font-weight;
+  line-height : $line-height;
+}
+
+// 6.0 Grid Maker
+@mixin grid ($cols, $r-mgn, $b-mgn){
+  float: left;
+  margin-right: $r-mgn;
+  margin-bottom: $b-mgn;
+  width: ((100% - (($cols - 1) * $r-mgn)) / $cols);
+  &:nth-child(#{$cols}n){
+    margin-right: 0;
+  }
+}
+
+// 7.0 Translate X & Y value
+@mixin translate($x, $y) {
+-webkit-transform: translate($x, $y);
+    -ms-transform: translate($x, $y); // IE9 only
+     -o-transform: translate($x, $y);
+        transform: translate($x, $y);
+}
+
+// 8.0 Placeholder Color
+@mixin placeholder($color) {
+  &::-webkit-input-placeholder { /* WebKit browsers */
+      color: $color;
+  }
+  &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+      color: $color;
+  }
+  &::-moz-placeholder { /* Mozilla Firefox 19+ */
+      color: $color;
+  }
+  &:-ms-input-placeholder { /* Internet Explorer 10+ */
+      color: $color;
+  }
+}
+
+// 9.0 Triangle
+@mixin triangle($size, $color, $direction) {
+    height: 0;
+    width: 0;
+    border-color: transparent;
+    border-style: solid;
+    border-width: $size / 2;
+
+    @if $direction == up {
+      border-bottom-color: $color;
+    } @else if $direction == right {
+      border-left-color:   $color;
+
+    } @else if $direction == down {
+      border-top-color:    $color;
+
+     } @else if $direction == left {
+      border-right-color:  $color;
+    }
+}

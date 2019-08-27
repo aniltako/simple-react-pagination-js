@@ -1,0 +1,191 @@
+body {
+  font-family: $font-open-sans;
+  font-weight: $font-normal;
+  font-size: $font-size-base;
+  color: $color-base;
+  background: #F9FCFC;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: $font-semi-bold;
+}
+
+h1 {
+  font-size: $font-size-h1;
+}
+h2 {
+  font-size: $font-size-h2;
+}
+h3 {
+  font-size: $font-size-h3;
+}
+h4 {
+  font-size: $font-size-h4;
+}
+h5 {
+  font-size: $font-size-h5;
+}
+h6 {
+  font-size: $font-size-h6;
+}
+
+svg:not(:root) {
+  overflow: unset;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+input {
+  @include placeholder($color-light);
+}
+button,
+textarea,
+input {
+  &:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+  }
+}
+
+#root {
+  min-height: 100vh;
+}
+.clearfix {
+  &:before,
+  &:after {
+    display: table;
+    content: '';
+  }
+  &:after {
+    clear: both;
+  }
+}
+.v-align {
+  top: 50%;
+  @include translate(0, -50%);
+}
+.c-align {
+  left: 50%;
+  @include translate(-50%, 0);
+}
+.v-c-align {
+  top: 50%;
+  left: 50%;
+  @include translate(-50%, -50%);
+}
+.overflow-hidden {
+  overflow: hidden;
+}
+.error {
+  font-size: $font-size-sm;
+  color: $color-red;
+  text-align: left;
+}
+.filter-blur {
+  filter: none; 
+  -webkit-filter: blur(0); 
+  -moz-filter: blur(0); 
+  -ms-filter: blur(0);
+  filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='0');
+}
+.text-ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.select-wrap {
+  border: lighten($color-base, 48%) solid 1px;
+  @include border-radius(2px);
+  position: relative;
+  background: $color-white;
+  &:before {
+    content: "\e900";
+    color: lighten($color-base, 48%);
+    font-family: $font-icon;
+    position: absolute;
+    right: 5px;
+    top: 0px;
+    transform         : rotate(90deg);
+    -webkit-transform : rotate(90deg);
+    -moz-transform    : rotate(90deg);
+    -ms-transform     : rotate(90deg);
+    @extend .v-align;
+  }
+  select {
+    border: none;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding-left: 3px;
+    padding-right: 20px;
+    position: relative;
+    z-index: 1;
+    background: transparent;
+    width: 100%;
+  }
+}
+.disabled {
+  pointer-events: none;
+  color: $color-light;
+  opacity: 0.7;
+}
+select[disabled], select:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+select:invalid {
+  color: $color-light;
+}
+.input-check {
+  display: inline-block;
+  position: relative;
+  margin-right: 4px;
+  input {
+    opacity: 0;
+    position: relative;
+    z-index: 1;
+    width: 16px !important;
+    height: 16px;
+    float: left;
+    margin-right: 5px;
+  }
+  span {
+    width: 16px;
+    height: 16px;
+    background: $color-white;
+    border: lighten($color-black, 70%) solid 1px;
+    @include border-radius(1px);
+    position: absolute;
+    top: 2px;
+    left: 0;
+  }
+  input[type=radio]:checked ~ span,
+  input[type=checkbox]:checked ~ span {
+    background: $color-blue;
+    border-color: $color-blue;
+    &:before {
+      content: "\e919";
+      font-family: $font-icon;
+      position: absolute;
+      top: 0;
+      left: 1px;
+      font-size: $font-size-xs;
+      color: $color-white;
+    }
+  }
+}
+.display-flex {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}

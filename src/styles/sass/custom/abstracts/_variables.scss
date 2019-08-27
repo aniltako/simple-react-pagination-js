@@ -1,0 +1,57 @@
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 Theme Color
+2.0 Fonts
+		2.1 Font Size
+		2.2 Font Family
+		2.3 Font Wieght
+3.0 Heading Size
+--------------------------------------------------------------*/
+
+// 1.0 Theme Color
+$color-base        : rgb(93,93,93); // #5D5D5D
+$color-white       : rgb(255,255,255); // #ffffff
+$color-black       : rgb(0,0,0); // #000000
+$color-light       : lighten($color-black, 86%);
+$color-blue        : rgb(57,181,181); // #39B5B5
+$color-blue-dark   : darken($color-blue, 10%);
+$color-green       : rgb(83,139,65); // #538B41
+$color-red         : rgb(245,69,69); //#F54545
+$color-red-dark    : darken($color-red, 10%);
+$color-yellow      : rgb(255,163,36); //#FFA324
+$color-yellow-dark : darken($color-yellow, 10%);
+$color-dodger-blue : rgb(0,127,255); //#007FFF
+
+// 2.0 Fonts
+// 2.1 Font Size
+$font-size-base : 14px !default;
+$font-size-xs   : ceil(($font-size-base * 0.71)) !default; // ~10px
+$font-size-sm   : ceil(($font-size-base * 0.82)) !default; // ~12px
+$font-size-md   : ceil(($font-size-base * 1.14)) !default; // ~16px
+$font-size-lg   : ceil(($font-size-base * 1.285)) !default; // ~18px
+	
+// 2.2 Font Family
+$font-open-sans : 'Open Sans', sans-serif;
+$font-icon: 'sp' !important;
+
+// 2.3 Font weight
+$font-light      : 300;
+$font-normal     : 400;
+$font-semi-bold  : 600;
+$font-bold       : 700;
+$font-ultra-bold : 800;
+
+// 3.0 Heading Size
+$font-size-h1 : floor(($font-size-base * 3.143)) !default; // ~44px
+$font-size-h2 : floor(($font-size-base * 2.572)) !default; // ~36px
+$font-size-h3 : floor(($font-size-base * 1.715)) !default; // ~24px
+$font-size-h4 : $font-size-lg;
+$font-size-h5 : $font-size-md;
+$font-size-h6 : $font-size-sm;
+
+// 4.0 global height
+$siteHeader : 54px;
+$siteNav : 44px;
+$rightSidebar : 260px;
+
