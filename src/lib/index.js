@@ -1,6 +1,4 @@
 import * as React from "react";
-import '../styles/css/custom/style.min.css';
-
 
 const pagination = (lastPage, props) => {
     const { page, pagesNextToActivePage } = props;
