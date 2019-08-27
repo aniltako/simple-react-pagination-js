@@ -1,6 +1,6 @@
 {
   "name": "simple-react-pagination-js",
-  "version": "0.0.0-development",
+  "version": "0.0.0-semantically-release",
   "description": "simple-pagination",
   "main": "build/index.js",
   "repository": {
@@ -17,7 +17,7 @@
     "build": "webpack --config webpack.prod.config.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "commit": "git-cz",
-    "release": "semantic-release"
+    "semantic-release": "semantic-release"
   },
   "files": [
     "build"
@@ -63,7 +63,10 @@
     }
   },
   "release": {
-      "branches": ["master", "next"]
+    "branches": [
+      "master",
+      "next"
+    ]
   },
   "keywords": [
     "js",
