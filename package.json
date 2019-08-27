@@ -1,8 +1,12 @@
 {
   "name": "simple-react-pagination-js",
-  "version": "1.0.3",
+  "version": "0.0.0-development",
   "description": "simple-pagination",
   "main": "build/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aniltako/simple-react-pagination-js.git"
+  },
   "scripts": {
     "build-custom": "node-sass-chokidar --include-path ./node_modules src/styles/sass/custom -o src/styles/css/custom --output-style compressed",
     "build-bootstrap": "node-sass-chokidar --include-path ./node_modules src/styles/sass/bootstrap -o src/styles/css/bootstrap/ --output-style compressed",
