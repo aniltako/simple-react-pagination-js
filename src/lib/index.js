@@ -19,7 +19,6 @@ const pagination = (lastPage, props) => {
         }
   
         for (let i of range ) {
-            
             if (l && i - l !== 1) {
                 rangeWithDots.push(
                     <li className="ellipsis" key={isDotsIncludes ? -1 : 0 }>
