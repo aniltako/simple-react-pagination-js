@@ -4,6 +4,9 @@
 
 Simple with zero dependency Pagination library.
 
+![pagination](https://user-images.githubusercontent.com/18716334/63941018-73e20280-ca8a-11e9-9ead-6cd39d76f4c1.png)
+
+
 ## Installation
 
 ```
@@ -55,5 +58,5 @@ class App extends React.Component{
 | `page`       | Number   |        | **Required.** Active page number   |
 | `onChangePage` | Function |           | **Required.** Callback function for page change. |
 | `onChangeSize` | Function |           | **Required.** Callback function for size change. |
-| `sizePerPageOptions`       | [10, 25] Or [{value: 10: label: "10 Items"}, {value: 10: label: "10 Items"}]  |        | **Optional.** Drop Down Select option for sizePerPage   |      [10, 25, 50, 100]                            |
+| `sizePerPageOptions`       | [10, 25] Or <br/>[<br/>{value: 10: label: "10 Items"}, <br/>{value: 10: label: "10 Items"}<br/>]  |        | **Optional.** Drop Down Select option for sizePerPage   |      [10, 25, 50, 100]                            |
 | `pagesNextToActivePage`       | Number   | 1   |  **Optional.** Number of page to show next to active page check demo |
