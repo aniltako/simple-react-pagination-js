@@ -55,5 +55,5 @@ class App extends React.Component{
 | `page`       | Number   |        | **Required.** Active page number   |
 | `onChangePage` | Function |           | **Required.** Callback function for page change. |
 | `onChangeSize` | Function |           | **Required.** Callback function for size change. |
-| `sizePerPageOptions`       | [10, 25] Or [{value: 10: label: "10 Items"}, {value: 10: label: "10 Items"}]  |        | **Optional.** Active page number   |      [10, 25, 50, 100]                            |
+| `sizePerPageOptions`       | [10, 25] Or [{value: 10: label: "10 Items"}, {value: 10: label: "10 Items"}]  |        | **Optional.** Drop Down Select option for sizePerPage   |      [10, 25, 50, 100]                            |
 | `pagesNextToActivePage`       | Number   | 1   |  **Optional.** Number of page to show next to active page check demo |
