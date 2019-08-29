@@ -14,7 +14,9 @@
     "watch-bootstrap": "node-sass-chokidar --include-path ./node_modules src/styles/sass/bootstrap/bootstrap.min.scss -o src/styles/css/bootstrap/ --watch --recursive --output-style compressed",
     "start-dev": "webpack-dev-server --config webpack.dev.config.js",
     "start": "npm-run-all -p watch-bootstrap watch-custom start-dev",
-    "build": "webpack --config webpack.prod.config.js",
+    "build-prod": "webpack --config webpack.prod.config.js",
+    "clear-build": "rimraf build",
+    "build": "npm-run-all clear-build build-prod",
     "test": "jest --verbose",
     "commit": "git-cz",
     "semantic-release": "semantic-release"
@@ -52,6 +54,7 @@
     "prop-types": "^15.7.2",
     "react-hot-loader": "^4.12.9",
     "react-test-renderer": "^16.8.6",
+    "rimraf": "^3.0.0",
     "sass-loader": "^7.1.0",
     "semantic-release": "^15.13.24",
     "style-loader": "^0.23.1",

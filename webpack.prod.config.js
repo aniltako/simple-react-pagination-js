@@ -5,7 +5,9 @@ var path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = merge(config, {
-    entry : './src/lib/index.js',
+    entry : {
+      index: ['./src/lib/index.js', './src/styles/css/custom/style.min.css']
+    },
     output : {
         libraryTarget: 'umd',
         library: 'simple-react-pagination-js',
@@ -20,12 +22,8 @@ module.exports = merge(config, {
                   {
                     loader: MiniCssExtractPlugin.loader,
                     options: {
-                      publicPath: (resourcePath, context) => {
-                        // publicPath is the relative path of the resource to the context
-                        // e.g. for ./css/admin/main.css the publicPath will be ../../
-                        // while for ./css/main.css the publicPath will be ../
-                        return path.relative(path.dirname(resourcePath), context) + '/';
-                      },
+                      publicPath: '../',
+                      include: [path.resolve(__dirname, 'src/styles/css/custom/style.min.css')]
                     },
                   },
                   'css-loader',

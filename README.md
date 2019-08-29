@@ -15,7 +15,7 @@ $ npm install simiple-react-pagination-js
 ```js
 import React from "react";
 import SPagination from "simple-react-pagination-js";
-import "simple-react-pagination-js/build/styles.css"; // import css
+import "simple-react-pagination-js/build/style.css"; // import css
 class App extends React.Component{
 
     constructor(props){
@@ -52,7 +52,8 @@ class App extends React.Component{
 | ------------------- | -------- | --------- | -------------------------------------------------------------------- |
 | `totalSize`       | Number   |    |  **Required.** Total data size |
 | `sizePerPage`       | Number   | 10   |  **Optional.** Number of data to display in each page |
-| `page`       | Number   |        | **Required.** Active page number                                     |
+| `page`       | Number   |        | **Required.** Active page number   |
 | `onChangePage` | Function |           | **Required.** Callback function for page change. |
 | `onChangeSize` | Function |           | **Required.** Callback function for size change. |
+| `sizePerPageOptions`       | [10, 25] Or [{value: 10: label: "10 Items"}, {value: 10: label: "10 Items"}]  |        | **Optional.** Active page number   |      [10, 25, 50, 100]                            |
 | `pagesNextToActivePage`       | Number   | 1   |  **Optional.** Number of page to show next to active page check demo |

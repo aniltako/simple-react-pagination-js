@@ -4,7 +4,7 @@ const pagination = (lastPage, props) => {
     const { page, pagesNextToActivePage } = props;
     let current = page,
         last = lastPage,
-        delta = pagesNextToActivePage ? pagesNextToActivePage : 4,
+        delta = pagesNextToActivePage,
         left = current - delta,
         right = current + delta + 1,
         range = [],
@@ -40,24 +40,34 @@ const pagination = (lastPage, props) => {
     return rangeWithDots;
 }
 
+const SelectOptions = (props) => {
+    const { sizePerPage, sizePerPageOptions } = props;
+    const optionsList = sizePerPageOptions.map( (option, index) => {
+        if ( typeof option === 'number' ) {
+            return <option key={index} value={option}>{option}</option>
+        } else if ( typeof option === 'object' ) {
+            return <option key={index} value={option.value}>{option.label}</option>
+        }
+    })
+    
+    return (
+        <select onChange={(e) => props.onSizeChange(parseInt(e.target.value))} value={sizePerPage}>
+            {optionsList}
+        </select>
+    )
+}
+
 const SPagination = (props) => {
-
-    const { totalSize, sizePerPage, page } = props;
-
+    const { totalSize, sizePerPage, page, itemsPerPageText } = props;
     let pageNum = Math.ceil(totalSize / sizePerPage);
     let pageList = pagination(pageNum, props);
     return (
         <footer>
             <div className="per-page">
                 <div className="select-wrap">
-                    <select onChange={(e) => props.onSizeChange(parseInt(e.target.value))} value={sizePerPage}>
-                        <option value={10}>10</option>
-                        <option value={25}>25</option>
-                        <option value={50}>50</option>
-                        <option value={100}>100</option>
-                    </select>
+                   <SelectOptions {...props}/>
                 </div>
-                Items per page
+                {itemsPerPageText}
             </div>
             <div className="next-prev">
                 <ul className="clearfix">
@@ -79,4 +89,13 @@ const SPagination = (props) => {
 }
 
 export default SPagination;
+
+SPagination.defaultProps = {
+    page: 1,
+    sizePerPage: 10,
+    totalSize: 0,
+    pagesNextToActivePage: 1,
+    sizePerPageOptions: [10, 25, 50, 100],
+    itemsPerPageText: 'Items per page'
+};
 

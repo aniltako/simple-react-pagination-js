@@ -31,7 +31,31 @@ class App extends React.Component{
                         totalSize={100}
                         pagesNextToActivePage={1}
                         onPageChange={this.handleOnPageChange}
+                        onSizeChange={this.handleOnSizeChange}/>            
+                </section>
+                <section role="pagination-section">
+                    <SPagination page={this.state.page}
+                        sizePerPage={this.state.size}
+                        totalSize={100}
+                        pagesNextToActivePage={1}
+                        sizePerPageOptions={[10, 25, 50, 100]}
+                        onPageChange={this.handleOnPageChange}
                         onSizeChange={this.handleOnSizeChange}/>
+                </section>
+                <section role="pagination-section">
+                    <SPagination page={this.state.page}
+                        sizePerPage={this.state.size}
+                        totalSize={0}
+                        pagesNextToActivePage={1}
+                        sizePerPageOptions={[
+                            {value: 10, label: "10 Page"},
+                            {value: 25, label: "25 Page"},
+                            {value: 50, label: "50 Page"},
+                            {value: 100, label: "100 Page"},
+                        ]}
+                        itemsPerPageText="Per Page"
+                        onPageChange={this.handleOnPageChange}
+                        onSizeChange={this.handleOnSizeChange}/>    
                 </section>
             </main>
         )
