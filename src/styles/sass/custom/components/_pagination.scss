@@ -17,6 +17,10 @@ ul {
   padding-left: 0;
 }
 
+li:hover {
+  cursor: pointer;
+}
+
 .v-align {
   top: 50%;
   @include translate(0, -50%);
@@ -109,7 +113,7 @@ footer {
             background: $color-blue;
           }
         }
-        &.disabled {
+        &.disabled, &.ellipsis {
           pointer-events: none;
           opacity: 0.5;
         }
