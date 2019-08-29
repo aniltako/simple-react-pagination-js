@@ -1,4 +1,3 @@
-
 const config = require('./webpack.config');
 const merge = require('webpack-merge');
 var path = require('path');
@@ -6,7 +5,8 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = merge(config, {
     entry : {
-      index: ['./src/lib/index.js', './src/styles/css/custom/style.min.css']
+      index: './src/lib/index.js',
+      style: './src/styles/css/custom/style.min.css'
     },
     output : {
         libraryTarget: 'umd',
