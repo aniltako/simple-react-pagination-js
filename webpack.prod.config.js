@@ -2,6 +2,7 @@ const config = require('./webpack.config');
 const merge = require('webpack-merge');
 var path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const WebpackIgnoreFiles = require('./plugins/WebpackIgnoreFiles');
 
 module.exports = merge(config, {
     entry : {
@@ -51,6 +52,7 @@ module.exports = merge(config, {
         filename: 'style.css',
         chunkFilename: '[id].css',
         ignoreOrder: false, // Enable to remove warnings about conflicting order
-      })
+      }),
+      new WebpackIgnoreFiles({files: ['style.js']})
     ]
 })
