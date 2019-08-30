@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/aniltako/simple-react-pagination-js.svg?branch=master)](https://travis-ci.org/aniltako/simple-react-pagination-js)
+[![Build Status](https://travis-ci.org/aniltako/simple-react-pagination-js.svg?branch=master)](https://travis-ci.org/aniltako/simple-react-pagination-js) [![Greenkeeper badge](https://badges.greenkeeper.io/aniltako/simple-react-pagination-js.svg)](https://greenkeeper.io/)
 
 # simple-react-pagination-js
 
