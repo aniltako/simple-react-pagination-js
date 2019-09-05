@@ -7,6 +7,7 @@
     "type": "git",
     "url": "https://github.com/aniltako/simple-react-pagination-js.git"
   },
+  "homepage": "https://aniltako.github.io/simple-react-pagination-js/",
   "scripts": {
     "build-custom": "node-sass-chokidar --include-path ./node_modules src/styles/sass/custom -o src/styles/css/custom --output-style compressed",
     "build-bootstrap": "node-sass-chokidar --include-path ./node_modules src/styles/sass/bootstrap -o src/styles/css/bootstrap/ --output-style compressed",
@@ -14,9 +15,12 @@
     "watch-bootstrap": "node-sass-chokidar --include-path ./node_modules src/styles/sass/bootstrap/bootstrap.min.scss -o src/styles/css/bootstrap/ --watch --recursive --output-style compressed",
     "start-dev": "webpack-dev-server --config webpack.dev.config.js",
     "start": "npm-run-all -p watch-bootstrap watch-custom start-dev",
+    "github": "webpack --config webpack.github.config.js",
+    "build-github": "gh-pages -d github",    
     "build-prod": "webpack --config webpack.prod.config.js",
     "clear-build": "rimraf build",
     "build": "npm-run-all clear-build build-custom build-prod",
+    "deploy": "npm-run-all clear-build build-custom build-github",
     "test": "jest --verbose",
     "commit": "git-cz",
     "semantic-release": "semantic-release"
