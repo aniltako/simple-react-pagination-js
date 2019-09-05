@@ -16,7 +16,7 @@
     "start-dev": "webpack-dev-server --config webpack.dev.config.js",
     "start": "npm-run-all -p watch-bootstrap watch-custom start-dev",
     "github": "webpack --config webpack.github.config.js",
-    "build-github": "gh-pages -d github",    
+    "build-github": "gh-pages -d github",
     "build-prod": "webpack --config webpack.prod.config.js",
     "clear-build": "rimraf build",
     "build": "npm-run-all clear-build build-custom build-prod",
@@ -32,8 +32,7 @@
   "license": "ISC",
   "dependencies": {
     "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-router-dom": "^5.0.1"
+    "react-dom": "^16.8.6"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
@@ -50,6 +49,7 @@
     "enzyme-to-json": "^3.4.0",
     "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^4.2.0",
+    "gh-pages": "^2.1.1",
     "html-webpack-plugin": "^3.2.0",
     "jest": "^24.8.0",
     "mini-css-extract-plugin": "^0.8.0",
