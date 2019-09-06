@@ -14,6 +14,7 @@
     "watch-custom": "node-sass-chokidar --include-path ./node_modules src/styles/sass/custom/style.min.scss -o src/styles/css/custom/ --watch --recursive --output-style compressed",
     "watch-bootstrap": "node-sass-chokidar --include-path ./node_modules src/styles/sass/bootstrap/bootstrap.min.scss -o src/styles/css/bootstrap/ --watch --recursive --output-style compressed",
     "start-dev": "webpack-dev-server --config webpack.dev.config.js",
+    "start-demo": "webpack-dev-server --config webpack.demo.config.js",
     "start": "npm-run-all -p watch-bootstrap watch-custom start-dev",
     "github": "webpack --config webpack.github.config.js",
     "build-github": "gh-pages -d github",
@@ -21,6 +22,7 @@
     "clear-build": "rimraf build",
     "build": "npm-run-all clear-build build-custom build-prod",
     "deploy": "npm-run-all clear-build build-custom build-github",
+    "demo": "npm-run-all -p watch-bootstrap watch-custom start-demo",
     "test": "jest --verbose",
     "commit": "git-cz",
     "semantic-release": "semantic-release"

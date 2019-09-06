@@ -2,3 +2,84 @@ section[role="pagination-section"] {
 	display: flex;
 	justify-content: center;
 }
+
+section[role="header"] {
+	height: 50vh;
+	background: #39b5b5;
+
+	.info {
+		padding-top: 10vh;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		h1 {
+			font-weight: $font-ultra-bold;
+		}
+
+		span {
+			font-weight: $font-semi-bold;
+		}
+
+		h1, span {
+			color: $color-white;
+		}
+
+		div.sample {
+			border-radius: 5px;
+			margin: 20px;
+			padding: 20px 20px 30px 20px;
+			background: $color-white;
+		}
+	}
+}
+
+section[role="main-info"] {
+	padding: 30px 100px;
+	p {
+		color: $color-base;
+		display: flex;
+		a {
+			padding-right: 10px;
+		}		
+	}
+
+	h3 {
+		margin-top: 20px
+	}
+
+	span {
+		&.installation {
+			margin-top: 10px;
+			padding: 10px;
+			background: #5d5d5d5e;
+			border-radius: 5px;
+		}
+	}
+
+	.example-list {
+		.example {
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+
+	pre{
+		white-space: pre-line;
+        background: #f4f4f4;
+		border: 1px solid #ddd;
+		border-left: 3px solid #39b5b5;
+		color: #666;
+		page-break-inside: avoid;
+		font-family: monospace;
+		font-size: 15px;
+		line-height: 1.6;
+		margin-bottom: 1.6em;
+		max-width: 100%;
+		overflow: auto;
+		padding: 1em 1.5em;
+		display: block;
+		word-wrap: break-word;
+    }
+
+}

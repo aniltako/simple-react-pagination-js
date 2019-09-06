@@ -2,7 +2,7 @@
 
 # simple-react-pagination-js
 
-Simple with zero dependency Pagination library.
+Simple with zero dependency Pagination library. [Demo](https://aniltako.github.io/simple-react-pagination-js/)
 
 ![pagination](https://user-images.githubusercontent.com/18716334/63941018-73e20280-ca8a-11e9-9ead-6cd39d76f4c1.png)
 
