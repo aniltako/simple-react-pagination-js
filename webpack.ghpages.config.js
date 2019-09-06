@@ -6,14 +6,10 @@ const WebpackIgnoreFiles = require('./plugins/WebpackIgnoreFiles');
 var HtmlWebpackPlugin =  require('html-webpack-plugin');
 
 module.exports = merge({
-    entry : {
-      index: './src/index.js',
-    },
+    entry : './src/demo/index.js',
     output : {
-        path : path.resolve(__dirname , 'build'),
-        filename: '[name].js',
-        libraryTarget: 'umd',
-        library: 'simple-react-pagination-js',
+        path : path.resolve(__dirname , 'build-demo'),
+        filename: 'index.js'
     },
     devtool: false,
     mode:'production',
