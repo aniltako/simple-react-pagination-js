@@ -64,7 +64,7 @@
     "react-test-renderer": "^16.8.6",
     "rimraf": "^3.0.0",
     "sass-loader": "^8.0.0",
-    "semantic-release": "^15.13.24",
+    "semantic-release": "^17.2.3",
     "style-loader": "^1.0.0",
     "webpack": "^4.36.1",
     "webpack-cli": "^3.3.6",
